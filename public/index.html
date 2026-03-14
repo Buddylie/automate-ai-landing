@@ -815,20 +815,27 @@ footer {
     <div class="sec-label" style="justify-content:center">Contatti</div>
     <div class="sec-title">Parliamone</div>
     <div class="sec-desc" style="margin:0 auto 0;max-width:420px">Hai domande o vuoi una demo dal vivo? Scrivimi — rispondo entro 24 ore.</div>
-    <div class="contact-form reveal">
+   
+
+        
+     <!-- FORM MODIFICATO CON FORMSPREE -->
+    <form class="contact-form reveal" action="https://formspree.io/f/xyknpove" method="POST">
       <div class="form-row">
-        <form class="contact-form reveal" action="https://formspree.io/f/xyknpove" method="POST">
-        <div class="form-row">
-        <input class="finput" type="text" placeholder="Il tuo nome">
-        <input class="finput" type="email" placeholder="La tua email">
+        <input class="finput" type="text" name="nome" placeholder="Il tuo nome" required>
+        <input class="finput" type="email" name="email" placeholder="La tua email" required>
       </div>
-      <input class="finput" type="text" placeholder="Azienda / settore (opzionale)">
-      <textarea class="finput" rows="4" style="resize:vertical" placeholder="Raccontami la tua esigenza — che processo vorresti automatizzare?"></textarea>
-      <button class="btn btn-fill" style="width:100%;padding:16px;font-size:15px"
-        onclick="this.textContent='Messaggio inviato ✓';this.style.background='var(--green)'">
+      <input class="finput" type="text" name="azienda" placeholder="Azienda / settore (opzionale)">
+      <textarea class="finput" rows="4" name="messaggio" style="resize:vertical" placeholder="Raccontami la tua esigenza — che processo vorresti automatizzare?" required></textarea>
+      
+      <!-- Antispam nascosto di Formspree -->
+      <input type="text" name="_gotcha" style="display:none">
+      
+      <button type="submit" class="btn btn-fill" style="width:100%;padding:16px;font-size:15px">
         Invia messaggio →
       </button>
-    </div>
+    </form>
+    <!-- FINE FORM MODIFICATO -->
+    
   </div>
 </div>
 </section>
