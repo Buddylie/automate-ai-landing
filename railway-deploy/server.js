@@ -1,3 +1,6 @@
+const PORT = process.env.PORT || 3000;
+console.log('Server starting...');
+
 const express = require('express');
 const path = require('path');
 const app = express();
